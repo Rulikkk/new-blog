@@ -153,7 +153,7 @@ def patreon_callback(request):
     if not membership:
         return render(request, "error.html", {
             "message": "Надо быть активным патроном, чтобы комментировать на сайте.<br>"
-                       "<a href=\"https://www.patreon.com/join/vas3k\">Станьте им здесь!</a>"
+                       "<a href=\"https://www.patreon.com/join/rulikkk\">Станьте им здесь!</a>"
         })
 
     user = User.objects\
