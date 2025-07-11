@@ -20,6 +20,7 @@ ALLOWED_HOSTS = [
     "ru.mustaf.in",
     "rmust.me",
     "ru.rmust.me",
+    "direct-test.mustaf.in",
 ]
 INTERNAL_IPS = ["127.0.0.1"]
 
