@@ -5,6 +5,12 @@ on:
     branches:
       - main
 
+env:
+  # Use docker.io for Docker Hub if empty
+  REGISTRY: ghcr.io
+  # github.repository as <account>/<repo>
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,6 +32,12 @@ jobs:
           uses: sigstore/cosign-installer@59acb6260d9c0ba8f4a2f9d9b48431a222b68e20 #v3.5.0
           with:
               cosign-release: "v2.2.4"
+
+        # Set up BuildKit Docker container builder to be able to build
+        # multi-platform images and export cache
+        # https://github.com/docker/setup-buildx-action
+        - name: Set up Docker Buildx
+          uses: docker/setup-buildx-action@f95db51fddba0c2d1ec667646a06c2ce06100226 # v3.0.0
   
         # Login against a Docker registry except on PR
         # https://github.com/docker/login-action
@@ -88,6 +100,7 @@ jobs:
     needs: build
     env:
       SSH_KEY_PATH: /tmp/ssh_key
+      BLOG_PATH: /root/blog
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -106,7 +119,7 @@ jobs:
           secret_EMAIL_HOST_PASSWORD: ${{ secrets.EMAIL_HOST_PASSWORD }}
       - run: echo "GITHUB_SHA=$GITHUB_SHA" >> .env
       - run: echo "${{ secrets.PRODUCTION_SSH_KEY }}" > ${{ env.SSH_KEY_PATH }} && chmod 600 ${{ env.SSH_KEY_PATH }}
-#      - run: scp -o StrictHostKeyChecking=no -i ${{ env.SSH_KEY_PATH }} -r $(pwd)/* ${{ secrets.PRODUCTION_SSH_USERNAME }}@${{ secrets.PRODUCTION_SSH_HOST }}:/home/vas3k/vas3k.blog
-      - run: scp -o StrictHostKeyChecking=no -i ${{ env.SSH_KEY_PATH }} .env ${{ secrets.PRODUCTION_SSH_USERNAME }}@${{ secrets.PRODUCTION_SSH_HOST }}:/home/vas3k/vas3k.blog/.env
-      - run: scp -o StrictHostKeyChecking=no -i ${{ env.SSH_KEY_PATH }} docker-compose.production.yml ${{ secrets.PRODUCTION_SSH_USERNAME }}@${{ secrets.PRODUCTION_SSH_HOST }}:/home/vas3k/vas3k.blog/docker-compose.production.yml
-      - run: ssh -i ${{ env.SSH_KEY_PATH }} ${{ secrets.PRODUCTION_SSH_USERNAME }}@${{ secrets.PRODUCTION_SSH_HOST }} "cd /home/vas3k/vas3k.blog && docker login ghcr.io -u $GITHUB_ACTOR -p ${{ secrets.TOKEN }} && docker pull ghcr.io/$GITHUB_ACTOR/blog:$GITHUB_SHA && docker-compose -f docker-compose.production.yml --env-file=.env up -d && docker system prune --all --force"
+#      - run: scp -o StrictHostKeyChecking=no -i ${{ env.SSH_KEY_PATH }} -r $(pwd)/* ${{ secrets.PRODUCTION_SSH_USERNAME }}@${{ secrets.PRODUCTION_SSH_HOST }}:${{ env.BLOG_PATH }}
+      - run: scp -o StrictHostKeyChecking=no -i ${{ env.SSH_KEY_PATH }} .env ${{ secrets.PRODUCTION_SSH_USERNAME }}@${{ secrets.PRODUCTION_SSH_HOST }}:${{ env.BLOG_PATH }}/.env
+      - run: scp -o StrictHostKeyChecking=no -i ${{ env.SSH_KEY_PATH }} docker-compose.production.yml ${{ secrets.PRODUCTION_SSH_USERNAME }}@${{ secrets.PRODUCTION_SSH_HOST }}:${{ env.BLOG_PATH }}/docker-compose.yml
+      - run: ssh -i ${{ env.SSH_KEY_PATH }} ${{ secrets.PRODUCTION_SSH_USERNAME }}@${{ secrets.PRODUCTION_SSH_HOST }} "cd ${{ env.BLOG_PATH }} && docker login ghcr.io -u $GITHUB_ACTOR -p ${{ secrets.TOKEN }} && docker compose pull && docker compose --env-file=.env up -d && docker system prune --all --force"

@@ -1,15 +1,14 @@
-version: "3"
 services:
   blog_app:
-    image: ghcr.io/vas3k/blog:${GITHUB_SHA:-latest}
+    image: ghcr.io/rulikkk/new-blog
     command: make docker-run-production
     container_name: blog_app
     environment:
       - PYTHONUNBUFFERED=1
       - DEBUG=false
-      - POSTGRES_DB=vas3k_blog
-      - POSTGRES_USER=vas3k
-      - POSTGRES_PASSWORD=vas3k
+      - POSTGRES_DB=rulikkk_blog
+      - POSTGRES_USER=rulikkk
+      - POSTGRES_PASSWORD=rulikkk
       - POSTGRES_HOST=postgres
       - TELEGRAM_TOKEN  # values below come from .env
       - TELEGRAM_MAIN_CHAT_ID
@@ -36,14 +35,14 @@ services:
         max-file: "3"
 
   postgres:
-    image: postgres:15
+    image: postgres:15-alpine
     container_name: blog_postgres
     restart: always
     environment:
-      POSTGRES_USER: vas3k
-      POSTGRES_PASSWORD: vas3k
-      POSTGRES_DB: vas3k_blog
+      POSTGRES_USER: rulikkk
+      POSTGRES_PASSWORD: rulikkk
+      POSTGRES_DB: rulikkk_blog
     volumes:
-      - /home/vas3k/pgdata_vas3k_blog:/var/lib/postgresql/data:rw
+      - ./pgdata_rulikkk_blog:/var/lib/postgresql/data:rw
     ports:
       - "127.0.0.1:54324:5432"

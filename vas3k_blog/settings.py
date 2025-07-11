@@ -16,13 +16,10 @@ DEBUG = (os.getenv("DEBUG") != "false")
 ALLOWED_HOSTS = [
     "0.0.0.0",
     "127.0.0.1",
-    "vas3k.blog",
-    "vas3k.ru",
-    "vas3k.com",
-    "vas3k.en",
-    "es.vas3k.blog",
-    "zh.vas3k.blog",
-    "hi.vas3k.blog",
+    "mustaf.in",
+    "ru.mustaf.in",
+    "rmust.me",
+    "ru.rmust.me",
 ]
 INTERNAL_IPS = ["127.0.0.1"]
 
