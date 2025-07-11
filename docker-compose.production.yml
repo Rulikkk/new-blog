@@ -23,7 +23,7 @@ services:
       - .env
     restart: always
     volumes:
-      - ./frontend/static:/tmp/static
+      - /var/www/frontend/static:/tmp/static
     depends_on:
       - postgres
     ports:
