@@ -12,6 +12,6 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip3 install poetry --break-system-packages && poetry install --no-interaction --no-ansi --no-cache
+RUN pip3 install poetry --break-system-packages && poetry install --no-interaction --no-ansi --no-cache --without dev
 
 CMD ["make", "docker-run-production"]
