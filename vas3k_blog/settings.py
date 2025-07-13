@@ -137,7 +137,7 @@ if MIGRATE:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.authn.password_validation.CommonPasswordValidator",
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
 ]
 
@@ -153,7 +153,7 @@ LANGUAGES = [
     ("hi", "Hindi"),
 ]
 
-LANGUAGE_CODE = "ru"
+LANGUAGE_CODE = "en"
 TIME_ZONE = "UTC"
 USE_I18N = True
 USE_L10N = True

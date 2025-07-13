@@ -111,21 +111,34 @@
 
     <div class="block donate-service">
         <div class="donate-service-image">
+            <img src="{% static "images/donate/bmc-brand-icon.svg" %}">
+        </div>
+        <div class="donate-service-description">
+            <strong>Buy me a coffee</strong><br>
+            {% trans "Можно задонатить одноразово или подписаться на новые обновления." %}
+        </div>
+        <div class="donate-service-button">
+                <a href="https://buymeacoffee.com/rm" class="button" target="_blank">❤️ {% trans "Купить мне кофе" %}</a>
+        </div>
+    </div>
+
+    <div class="block donate-service">
+        <div class="donate-service-image">
                 <img src="{% static "images/donate/patreon.png" %}">
         </div>
         <div class="donate-service-description">
-            <strong>{% trans "На Патреоне" %}</strong><br>
+            <strong>{% trans "На Патреоне (TBD)" %}</strong><br>
             {% trans "Там можно заносить автоматически и получить ранний доступ и прочие плюшки." %}
         </div>
         <div class="donate-service-button">
-                <a href="https://www.patreon.com/vas3k" class="button" target="_blank">❤️ {% trans "Стать Патроном" %}</a>
+                <a class="button" disabled target="_blank">❤️ {% trans "Стать Патроном" %}</a>
         </div>
     </div>
     {% else %}
     {% comment %}
     <div class="block donate-service">
         <div class="donate-service-image">
-                <img src="{% static "images/donate/paypal.png" %}">
+            <img src="{% static "images/donate/paypal.png" %}">
         </div>
         <div class="donate-service-description">
             <strong>PayPal</strong><br>
@@ -141,14 +154,27 @@
 
     <div class="block donate-service">
         <div class="donate-service-image">
-                <img src="{% static "images/donate/ko-fi.png" %}">
+            <img src="{% static "images/donate/bmc-brand-icon.svg" %}">
         </div>
         <div class="donate-service-description">
-            <strong>Ko-fi</strong><br>
+            <strong>Buy me a coffee</strong><br>
             {% trans "Можно задонатить одноразово или подписаться на новые обновления." %}
         </div>
         <div class="donate-service-button">
-                <a href="https://ko-fi.com/vas3k" class="button" target="_blank">❤️ {% trans "Купить мне Ko-fi" %}</a>
+                <a href="https://buymeacoffee.com/rm" class="button" target="_blank">❤️ {% trans "Купить мне кофе" %}</a>
+        </div>
+    </div>
+
+        <div class="block donate-service">
+        <div class="donate-service-image">
+            <img src="{% static "images/donate/patreon.png" %}">
+        </div>
+        <div class="donate-service-description">
+            <strong>{% trans "На Патреоне" %}</strong><br>
+            {% trans "Там можно заносить автоматически и получить ранний доступ и прочие плюшки." %}
+        </div>
+        <div class="donate-service-button">
+                <a class="button" disabled target="_blank">❤️ {% trans "Стать Патроном" %}</a>
         </div>
     </div>
 
@@ -189,12 +215,12 @@
     {% endcomment %}
     {% endif %}
 
+    {% comment %}
     <div class="block donate-service donate-service-column">
         <div class="donate-service-description">
             <strong>{% trans "Криптой" %}</strong>
         </div>
 
-        {% comment %}
         <div class="donate-service-selector">
             <div class="donate-service-selector-item">
                 <span>{% trans "Биткоин" %}</span>
@@ -214,7 +240,7 @@
                 <small>UQA3z-5WpahR8o5bJoo11FyWfogpfJgmLgnVNVZ8iXZfUS_6</small>
             </div>
         </div>
-        {% endcomment %}
     </div>
+    {% endcomment %}
 </div>
 {% endblock %}
