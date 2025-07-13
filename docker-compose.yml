@@ -3,7 +3,10 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
-    command: make docker-run-dev
+    command: > 
+      sh -c "python3 ./utils/wait_for_postgres.py && 
+      python3 manage.py migrate && 
+      python3 manage.py runserver 0.0.0.0:8000"
     container_name: blog_app
     environment:
       - DEBUG=true
