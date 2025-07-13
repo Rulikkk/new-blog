@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-19 21:27+0000\n"
+"POT-Creation-Date: 2025-07-13 20:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,7 +52,7 @@ msgstr "Comment right here..."
 
 #: frontend/html/common/contacts.html:6
 #: frontend/html/common/post_subscribe.html:33
-#: frontend/html/emails/layout.html:131
+#: frontend/html/emails/layout.html:129
 msgid "https://t.me/vas3k_channel"
 msgstr "https://t.me/vas3k_channel"
 
@@ -63,13 +63,13 @@ msgstr "Telegram channel"
 
 #: frontend/html/common/contacts.html:11
 #: frontend/html/common/post_subscribe.html:37
-#: frontend/html/emails/layout.html:132 frontend/html/layout.html:66
+#: frontend/html/emails/layout.html:130 frontend/html/layout.html:66
 msgid "https://twitter.com/vas3k"
 msgstr "https://x.com/vas3kcom"
 
 #: frontend/html/common/contacts.html:13
 #: frontend/html/common/post_subscribe.html:37
-#: frontend/html/emails/layout.html:132 frontend/html/layout.html:68
+#: frontend/html/emails/layout.html:130 frontend/html/layout.html:68
 msgid "Твиттер"
 msgstr "Twitter"
 
@@ -95,13 +95,13 @@ msgstr "Bsky"
 
 #: frontend/html/common/contacts.html:26
 #: frontend/html/common/post_subscribe.html:38
-#: frontend/html/emails/layout.html:133
+#: frontend/html/emails/layout.html:131
 msgid "https://www.patreon.com/vas3k"
 msgstr "https://ko-fi.com/vas3k"
 
 #: frontend/html/common/contacts.html:28
 #: frontend/html/common/post_subscribe.html:38
-#: frontend/html/emails/layout.html:133
+#: frontend/html/emails/layout.html:131
 msgid "Патреон"
 msgstr "Ko-fi"
 
@@ -196,89 +196,42 @@ msgstr ""
 "articles, dropping me a donation is the best way to say 'thank you' and "
 "motivation to continue."
 
-#: frontend/html/donate.html:41
-msgid "На Тиньков (карты РФ)"
-msgstr "Tinkoff (RU cards)"
+#: frontend/html/donate.html:121
+msgid "На сайте Buymeacoffee.com"
+msgstr "At Buymeacoffee.com"
 
-#: frontend/html/donate.html:42
-msgid ""
-"Если вы из России, перевод на карту будет проще всего. По клику откроется "
-"удобное окошко."
-msgstr ""
-"If you're from Russia, a card transfer will be the easiest. Click to open a "
-"convenient window."
+#: frontend/html/donate.html:122 frontend/html/donate.html:166
+msgid "Можно задонатить одноразово."
+msgstr "One time donation."
 
-#: frontend/html/donate.html:47
-msgid "Либо по номеру карты:"
-msgstr "Card number:"
+#: frontend/html/donate.html:125 frontend/html/donate.html:169
+msgid "Купить мне кофе"
+msgstr "Buy me a coffee"
 
-#: frontend/html/donate.html:52 frontend/html/donate.html:69
-#: frontend/html/donate.html:99 frontend/html/donate.html:157
-#: frontend/html/donate.html:172
-msgid "Донатить"
-msgstr "Donate"
-
-#: frontend/html/donate.html:62 frontend/html/donate.html:150
-msgid "Через Stripe (карты не РФ)"
-msgstr "Stripe"
-
-#: frontend/html/donate.html:64 frontend/html/donate.html:152
-msgid ""
-"Позволяет задонатить мне в Евро с любых зарубежных карт. Поддерживает Google "
-"и Apple Pay."
-msgstr "Supports cards, Google Pay and Apple Pay."
-
-#: frontend/html/donate.html:80 frontend/html/donate.html:123
-msgid ""
-"Вариант для живущих заграницей и просто у кого там завалялась мелочь на "
-"аккаунте."
-msgstr "Good old PayPal transfer which always work."
-
-#: frontend/html/donate.html:95 frontend/html/donate.html:168
-msgid "Прямой перевод для пользователей Революта."
-msgstr "Direct transfer for Revolut users. Fast and zero fees."
-
-#: frontend/html/donate.html:109
-msgid "На Патреоне"
+#: frontend/html/donate.html:134 frontend/html/donate.html:178
+msgid "На Патреоне (TBD)"
 msgstr "Patreon (TBD)"
 
-#: frontend/html/donate.html:110
+#: frontend/html/donate.html:135 frontend/html/donate.html:179
 msgid ""
 "Там можно заносить автоматически и получить ранний доступ и прочие плюшки."
 msgstr ""
 "You can subscribe to my Patreon and get early access to posts and other "
 "perks."
 
-#: frontend/html/donate.html:113
+#: frontend/html/donate.html:138 frontend/html/donate.html:182
 msgid "Стать Патроном"
 msgstr "Become a Patron"
 
-#: frontend/html/donate.html:138
-msgid "Можно задонатить одноразово или подписаться на новые обновления."
+#: frontend/html/donate.html:165
+msgid "Buymeacoffee.com"
 msgstr ""
-"There you can donate me a beer/coffee or become a member to get new updates."
-
-#: frontend/html/donate.html:141
-msgid "Купить мне кофе"
-msgstr "Buy me a coffee"
-
-#: frontend/html/donate.html:180
-msgid "Криптой"
-msgstr "Crypto"
-
-#: frontend/html/donate.html:185
-msgid "Биткоин"
-msgstr "Bitcoin"
-
-#: frontend/html/donate.html:191
-msgid "Эфир или USDT"
-msgstr "ETH and USDT"
 
 #: frontend/html/emails/layout.html:4 rss/feeds.py:13
 msgid "Вастрик.ру"
 msgstr "Vastrik"
 
-#: frontend/html/emails/layout.html:131
+#: frontend/html/emails/layout.html:129
 msgid "Телеграм"
 msgstr "Telegram"
 
@@ -286,11 +239,11 @@ msgstr "Telegram"
 msgid "Новый пост на Вастрике"
 msgstr "New post from Vastrik"
 
-#: frontend/html/emails/new_post.html:20
+#: frontend/html/emails/new_post.html:25
 msgid "Привет, Олимпийский!"
 msgstr "Hey!"
 
-#: frontend/html/emails/new_post.html:24
+#: frontend/html/emails/new_post.html:29
 msgid ""
 "Это Вастрик. У меня в блоге сегодня вышел новый пост и я, как и обещал, "
 "присылаю вам его одними из первых."
@@ -463,7 +416,7 @@ msgstr "Enter"
 msgid "Настройки профиля"
 msgstr "Profile settings"
 
-#: inside/management/commands/send_new_post.py:70
+#: inside/management/commands/send_new_post.py:85
 msgid "Новый пост в блоге Вастрика: "
 msgstr "New post in Vastrik's blog: "
 
@@ -562,7 +515,7 @@ msgstr "Vastrik: Secret feed"
 msgid "Вастрик.ру: Только публичные посты"
 msgstr "Vastrik: Public posts only"
 
-#: vas3k_blog/settings.py:219
+#: vas3k_blog/settings.py:230
 msgid "Вастрик <inside@inside.vas3k.ru>"
 msgstr "Vastrik <inside@inside.vas3k.ru>"
 
@@ -607,3 +560,52 @@ msgid ""
 msgstr ""
 "Subscribe to any of my channels so you don't miss new posts. Email is "
 "usually the most reliable way but the Gen Z hate it, so I have socials too."
+
+#~ msgid "Можно задонатить одноразово или подписаться на новые обновления."
+#~ msgstr ""
+#~ "There you can donate me a beer/coffee or become a member to get new "
+#~ "updates."
+
+#~ msgid "На Патреоне"
+#~ msgstr "Patreon (TBD)"
+
+#~ msgid "На Тиньков (карты РФ)"
+#~ msgstr "Tinkoff (RU cards)"
+
+#~ msgid ""
+#~ "Если вы из России, перевод на карту будет проще всего. По клику откроется "
+#~ "удобное окошко."
+#~ msgstr ""
+#~ "If you're from Russia, a card transfer will be the easiest. Click to open "
+#~ "a convenient window."
+
+#~ msgid "Либо по номеру карты:"
+#~ msgstr "Card number:"
+
+#~ msgid "Донатить"
+#~ msgstr "Donate"
+
+#~ msgid "Через Stripe (карты не РФ)"
+#~ msgstr "Stripe"
+
+#~ msgid ""
+#~ "Позволяет задонатить мне в Евро с любых зарубежных карт. Поддерживает "
+#~ "Google и Apple Pay."
+#~ msgstr "Supports cards, Google Pay and Apple Pay."
+
+#~ msgid ""
+#~ "Вариант для живущих заграницей и просто у кого там завалялась мелочь на "
+#~ "аккаунте."
+#~ msgstr "Good old PayPal transfer which always work."
+
+#~ msgid "Прямой перевод для пользователей Революта."
+#~ msgstr "Direct transfer for Revolut users. Fast and zero fees."
+
+#~ msgid "Криптой"
+#~ msgstr "Crypto"
+
+#~ msgid "Биткоин"
+#~ msgstr "Bitcoin"
+
+#~ msgid "Эфир или USDT"
+#~ msgstr "ETH and USDT"

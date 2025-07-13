@@ -148,9 +148,9 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGES = [
     ("en", "English"),
     ("ru", "Russian"),
-    ("es", "Español"),
-    ("zh", "Chinese"),
-    ("hi", "Hindi"),
+    # ("es", "Español"),
+    # ("zh", "Chinese"),
+    # ("hi", "Hindi"),
 ]
 
 LANGUAGE_CODE = "en"
@@ -167,9 +167,6 @@ LOCALE_PATHS = [
 DOMAIN_LANGUAGES = {
     "vas3k.blog": "ru",
     "vas3k.com": "en",
-    "es.vas3k.blog": "es",
-    "zh.vas3k.blog": "zh",
-    "hi.vas3k.blog": "hi",
 }
 
 if DEBUG:
@@ -180,8 +177,8 @@ if DEBUG:
     }
 
 DOMAIN_LANGUAGE_SELECTOR = [
-    ("ru", "RU", "https://vas3k.blog"),
-    ("en", "EN", "https://vas3k.com"),
+    ("ru", "RU", "https://mustaf.in"),
+    ("en", "EN", "https://mustaf.in"),
 ]
 
 # Static files (CSS, JavaScript, Images)
