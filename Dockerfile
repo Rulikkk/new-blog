@@ -6,7 +6,7 @@ ENV PIP_DISABLE_PIP_VERSION_CHECK=true
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PIP_BREAK_SYSTEM_PACKAGES=1
 ENV POETRY_CACHE_DIR=/tmp/poetry_cache
-ENV POETRY_VIRTUALENVS_IN_PROJECT=true
+ENV POETRY_VIRTUALENVS_IN_PROJECT=false
 ENV POETRY_VIRTUALENVS_CREATE=true
 ENV POETRY_VIRTUALENVS_OPTIONS_ALWAYS_COPY=true
 
@@ -15,16 +15,15 @@ WORKDIR /app
 COPY pyproject.toml poetry.lock /app
 
 RUN pip3 install poetry --break-system-packages && \
-    poetry install --no-interaction --no-ansi --only main --no-root --no-directory && \
-    mv .venv /tmp/venv
+    poetry install --no-interaction --no-ansi --only main --no-root --no-directory
 
 FROM base
 
 WORKDIR /app
 
-ENV VIRTUAL_ENV=/tmp/venv
-ENV PATH="/tmp/venv/bin:$PATH"
-
+# we all hope poetry won't rename this stuff later
+ENV VIRTUAL_ENV=/tmp/poetry_cache/virtualenvs/vas3k-blog-9TtSrW0h-py3.12
+ENV PATH="${VIRTUAL_ENV}/bin:$PATH"
 COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
 COPY . /app

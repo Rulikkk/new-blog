@@ -3,7 +3,7 @@ services:
     image: ghcr.io/rulikkk/new-blog
     command: >
       sh -c "cp -r /app/frontend/static /tmp/ &&
-        python3 manage.py migrate
+        python3 manage.py migrate &&
         gunicorn vas3k_blog.asgi:application -w 5 -k uvicorn.workers.UvicornWorker --bind=0.0.0.0:8022 --capture-output --log-level debug --access-logfile - --error-logfile -"
     container_name: blog_app
     environment:

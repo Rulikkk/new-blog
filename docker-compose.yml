@@ -18,8 +18,8 @@ services:
     env_file:
       - .env
     restart: always
-    volumes:
-      - .:/app:delegated # enable hot code reload in debug mode
+    # volumes:
+      # - .:/app:cached # enable hot code reload in debug mode
     depends_on:
       - postgres
     ports:
@@ -32,5 +32,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=vas3k_blog
+    volumes:
+      - ./pgdata_rulikkk_blog:/var/lib/postgresql/data:rw
     ports:
       - "5432:5432"
