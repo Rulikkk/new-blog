@@ -18,8 +18,8 @@ services:
     env_file:
       - .env
     restart: always
-    # volumes:
-      # - .:/app:cached # enable hot code reload in debug mode
+    volumes:
+      - .:/app:cached # enable hot code reload in debug mode
     depends_on:
       - postgres
     ports:

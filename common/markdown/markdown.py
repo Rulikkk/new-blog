@@ -12,7 +12,7 @@ from common.markdown.plugins.text_block import text_block
 def markdown_text(text, renderer=Vas3kRenderer):
     markdown = mistune.create_markdown(
         escape=False,
-        hard_wrap=True,
+        hard_wrap=False,
         renderer=renderer(escape=False) if renderer else None,
         plugins=[
             "strikethrough",

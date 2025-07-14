@@ -11,7 +11,7 @@ function initializeImageZoom() {
 }
 
 function initializeHighlightJS() {
-    hljs.initHighlightingOnLoad();
+    hljs.initHighlighting();
 }
 
 function initializePoorManEmoji() {
@@ -66,7 +66,7 @@ function toggleHeaderSearch(event, targetId) {
     event.target.classList.toggle("header-menu-full");
 }
 
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function () {
     console.log("Initializing js...")
     initializeImageZoom();
     initializePoorManEmoji();
