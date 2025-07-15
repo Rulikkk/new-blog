@@ -8,9 +8,6 @@ from django.utils.safestring import mark_safe
 from common.markdown.markdown import markdown_text
 
 register = template.Library()
-clicker_template = loader.get_template("clickers/clicker.html")
-inline_comments_template = loader.get_template("comments/inline-comment-list.html")
-
 
 @register.simple_tag(takes_context=True)
 def show_post(context, post):
@@ -43,6 +40,8 @@ def show_post(context, post):
 def clicker(context, block, text=None):
     clicker = context["clickers"].get(block) or {}
 
+    clicker_template = loader.get_template("clickers/clicker.html")
+
     return clicker_template.render({
         **context.flatten(),
         "text": text or "",
@@ -53,6 +52,7 @@ def clicker(context, block, text=None):
 
 
 def commentable(context, block):
+    inline_comments_template = loader.get_template("comments/inline-comment-list.html")
     return inline_comments_template.render({
         **context.flatten(),
         "username": context["cookies"].get("username") or "",
