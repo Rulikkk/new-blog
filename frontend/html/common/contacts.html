@@ -3,15 +3,16 @@
 
 <section class="contacts">
     {% if request.LANGUAGE_CODE == "ru" %}
-        <a href="{% trans "https://t.me/vas3k_channel" %}" class="contacts-item" target="_blank" rel="me">
+        <a href="{% trans "https://t.me/techno_ru" %}" class="contacts-item" target="_blank" rel="me">
             <i class="fab fa-telegram"></i><span>{% trans "Телеграм-канал" %}</span>
         </a>
     {% endif %}
 
-    <a href="{% trans "https://twitter.com/vas3k" %}" class="contacts-item" target="_blank" rel="me">
+    <a href="{% trans "https://twitter.com/rulikkk" %}" class="contacts-item" target="_blank" rel="me">
         <i class="fab fa-twitter-square"></i>
         <span>{% trans "Твиттер" %}</span>
     </a>
+    {% comment %}
 
     <a href="{% trans "https://mastodon.online/@vas3k" %}" class="contacts-item" target="_blank" rel="me">
         <i class="fab fa-mastodon"></i>
@@ -27,15 +28,16 @@
         <i class="fab fa-patreon"></i>
         <span>{% trans "Патреон" %}</span>
     </a>
-
-    <a href="{% trans "https://github.com/vas3k" %}" class="contacts-item" target="_blank" rel="me">
+    
+    {% endcomment %}
+    <a href="{% trans "https://github.com/rulikkk" %}" class="contacts-item" target="_blank" rel="me">
         <i class="fab fa-github"></i>
         <span>{% trans "Гитхаб" %}</span>
     </a>
 
-    <a href="mailto:{% trans "me@vas3k.ru" %}" class="contacts-item" target="_blank" rel="me">
+    <a href="mailto:{% trans "mustafin.rustem@gmail.com" %}" class="contacts-item" target="_blank" rel="me">
         <i class="fas fa-envelope"></i>
-        <span>{% trans "me@vas3k.ru" %}</span>
+        <span>{% trans "mustafin.rustem@gmail.com" %}</span>
     </a>
 
     <a href="https://{{ request.get_host }}/rss/" class="contacts-item" target="_blank" rel="syndication">
