@@ -150,6 +150,7 @@
     }
 
     .post pre code {
+        font-size: 80%;
         font-family: monospace;
         border-radius: 20px;
         white-space: pre;
