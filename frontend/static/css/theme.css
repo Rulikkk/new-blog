@@ -1,6 +1,6 @@
 :root {
     --sans-font: "Ubuntu", Helvetica, Verdana, sans-serif;
-    --serif-font: "Merriweather", Georgia, Times, serif;
+    --serif-font: -apple-system-ui-serif, ui-serif, "Merriweather", Georgia, Times, serif;
 
     --block-border-radius: 15px;
     --button-border-radius: 15px;
