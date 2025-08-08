@@ -27,9 +27,10 @@ def create_comment(sender, instance, created, **kwargs):
 
     full_text = f"💬 <b>{comment.author_name}</b> ➜ <a href='{link}'>{post.title}</a>:\n\n{comment.text[:2000]}"
 
-    bot.send_message(
-        chat_id=settings.TELEGRAM_MAIN_CHAT_ID,
-        text=full_text,
-        parse_mode=telegram.ParseMode.HTML,
-        disable_web_page_preview=True
-    )
+    if bot:
+        bot.send_message(
+            chat_id=settings.TELEGRAM_MAIN_CHAT_ID,
+            text=full_text,
+            parse_mode=telegram.ParseMode.HTML,
+            disable_web_page_preview=True
+        )
