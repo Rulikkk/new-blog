@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 12:12+0000\n"
+"POT-Creation-Date: 2025-08-08 11:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,39 +50,50 @@ msgstr "Delete"
 msgid "Откомментировать прямо здесь..."
 msgstr "Comment right here..."
 
+#: frontend/html/common/contacts.html:4
+#: frontend/html/common/post_subscribe.html:35
+msgid "https://linkedin.com/in/rustem-mustafin-8a148368/"
+msgstr "https://linkedin.com/in/rustem-mustafin-8a148368/"
+
 #: frontend/html/common/contacts.html:6
+#: frontend/html/common/post_subscribe.html:35
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: frontend/html/common/contacts.html:9 frontend/html/common/contacts.html:11
+msgid "mustafin.rustem@gmail.com"
+msgstr "mustafin.rustem@gmail.com"
+
+#: frontend/html/common/contacts.html:14
+msgid "https://github.com/rulikkk"
+msgstr "https://github.com/rulikkk"
+
+#: frontend/html/common/contacts.html:16
+msgid "Гитхаб"
+msgstr "Github"
+
+#: frontend/html/common/contacts.html:20
+#: frontend/html/common/post_subscribe.html:33
 msgid "https://t.me/techno_ru"
 msgstr "https://t.me/techno_en"
 
-#: frontend/html/common/contacts.html:7
+#: frontend/html/common/contacts.html:21
 #: frontend/html/common/post_subscribe.html:33
 msgid "Телеграм-канал"
 msgstr "Telegram channel"
 
-#: frontend/html/common/contacts.html:11 frontend/html/layout.html:66
+#: frontend/html/common/contacts.html:25
+#: frontend/html/common/post_subscribe.html:36
 msgid "https://twitter.com/rulikkk"
 msgstr "https://twitter.com/rulikkk"
 
-#: frontend/html/common/contacts.html:13
-#: frontend/html/common/post_subscribe.html:37
-#: frontend/html/emails/layout.html:130 frontend/html/layout.html:68
+#: frontend/html/common/contacts.html:27
+#: frontend/html/common/post_subscribe.html:36
+#: frontend/html/emails/layout.html:130
 msgid "Твиттер"
 msgstr "Twitter"
 
-#: frontend/html/common/contacts.html:34
-msgid "https://github.com/rulikkk"
-msgstr "https://github.com/rulikkk"
-
-#: frontend/html/common/contacts.html:36
-msgid "Гитхаб"
-msgstr "Github"
-
-#: frontend/html/common/contacts.html:39 frontend/html/common/contacts.html:41
-#: frontend/html/layout.html:58 frontend/html/layout.html:60
-msgid "mustafin.rustem@gmail.com"
-msgstr "mustafin.rustem@gmail.com"
-
-#: frontend/html/common/contacts.html:46
+#: frontend/html/common/contacts.html:53
 msgid "RSS"
 msgstr "RSS"
 
@@ -141,41 +152,15 @@ msgstr "* no spam or ads, only new post notifications"
 msgid "Другие площадки"
 msgstr "Socials"
 
-#: frontend/html/common/post_subscribe.html:33
-#: frontend/html/emails/layout.html:129
-msgid "https://t.me/vas3k_channel"
-msgstr "https://t.me/vas3k_channel"
-
-#: frontend/html/common/post_subscribe.html:35
-msgid "https://mastodon.online/@vas3k"
-msgstr "https://mas.to/@vas3kcom"
-
-#: frontend/html/common/post_subscribe.html:35
-msgid "Мастодон"
-msgstr "Mastodon"
-
-#: frontend/html/common/post_subscribe.html:36
-msgid "https://bsky.app/profile/vas3k.bsky.social"
+#: frontend/html/common/post_subscribe.html:37
+#, fuzzy
+#| msgid "https://bsky.app/profile/vas3k.bsky.social"
+msgid "https://bsky.app/profile/rulikkk.bsky.social"
 msgstr "https://bsky.app/profile/vas3k.bsky.social"
 
-#: frontend/html/common/post_subscribe.html:36
+#: frontend/html/common/post_subscribe.html:37
 msgid "Блюскай"
 msgstr "Bsky"
-
-#: frontend/html/common/post_subscribe.html:37
-#: frontend/html/emails/layout.html:130
-msgid "https://twitter.com/vas3k"
-msgstr "https://x.com/vas3kcom"
-
-#: frontend/html/common/post_subscribe.html:38
-#: frontend/html/emails/layout.html:131
-msgid "https://www.patreon.com/vas3k"
-msgstr "https://ko-fi.com/vas3k"
-
-#: frontend/html/common/post_subscribe.html:38
-#: frontend/html/emails/layout.html:131
-msgid "Патреон"
-msgstr "Ko-fi"
 
 #: frontend/html/common/post_translations.html:7
 msgid "Этот пост переведен на другие языки"
@@ -231,9 +216,25 @@ msgstr ""
 msgid "Вастрик.ру"
 msgstr "Vastrik"
 
-#: frontend/html/emails/layout.html:129 frontend/html/layout.html:64
+#: frontend/html/emails/layout.html:129
+msgid "https://t.me/vas3k_channel"
+msgstr "https://t.me/vas3k_channel"
+
+#: frontend/html/emails/layout.html:129
 msgid "Телеграм"
 msgstr "Telegram"
+
+#: frontend/html/emails/layout.html:130
+msgid "https://twitter.com/vas3k"
+msgstr "https://x.com/vas3kcom"
+
+#: frontend/html/emails/layout.html:131
+msgid "https://www.patreon.com/vas3k"
+msgstr "https://ko-fi.com/vas3k"
+
+#: frontend/html/emails/layout.html:131
+msgid "Патреон"
+msgstr "Ko-fi"
 
 #: frontend/html/emails/new_post.html:15
 msgid "Новый пост на Вастрике"
@@ -328,13 +329,7 @@ msgstr "I am Rustem Mustafin"
 msgid "Для связи"
 msgstr "Contact me"
 
-#: frontend/html/layout.html:62
-#, fuzzy
-#| msgid "https://t.me/to_vas3k_bot"
-msgid "https://t.me/rulikkk"
-msgstr "https://t.me/vas3k"
-
-#: frontend/html/layout.html:74
+#: frontend/html/layout.html:63
 msgid ""
 "Вы можете использовать цитаты из статей, картинки и скриншоты в своих блогах "
 "и презентациях, если поставите ссылку на оригинальный пост. Присылайте "
@@ -570,6 +565,17 @@ msgid ""
 msgstr ""
 "Subscribe to any of my channels so you don't miss new posts. Email is "
 "usually the most reliable way but the Gen Z hate it, so I have socials too."
+
+#~ msgid "https://mastodon.online/@vas3k"
+#~ msgstr "https://mas.to/@vas3kcom"
+
+#~ msgid "Мастодон"
+#~ msgstr "Mastodon"
+
+#, fuzzy
+#~| msgid "https://t.me/to_vas3k_bot"
+#~ msgid "https://t.me/rulikkk"
+#~ msgstr "https://t.me/vas3k"
 
 #~ msgid "https://github.com/vas3k"
 #~ msgstr "https://github.com/vas3k"

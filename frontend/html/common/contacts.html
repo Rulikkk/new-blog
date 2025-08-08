@@ -1,22 +1,30 @@
 {% load static %}
 {% load i18n %}
+    
+    <a href="{% trans "https://linkedin.com/in/rustem-mustafin-8a148368/" %}" class="contacts-item" target="_blank" rel="me">
+        <i class="fab fa-linkedin"></i>
+        <span>{% trans "LinkedIn" %}</span>
+    </a>
 
-<section class="contacts">
+    <a href="mailto:{% trans "mustafin.rustem@gmail.com" %}" class="contacts-item" target="_blank" rel="me">
+        <i class="fas fa-envelope"></i>
+        <span>{% trans "mustafin.rustem@gmail.com" %}</span>
+    </a>
+    
+    <a href="{% trans "https://github.com/rulikkk" %}" class="contacts-item" target="_blank" rel="me">
+        <i class="fab fa-github"></i>
+        <span>{% trans "Гитхаб" %}</span>
+    </a>
+
     {% if request.LANGUAGE_CODE == "ru" %}
         <a href="{% trans "https://t.me/techno_ru" %}" class="contacts-item" target="_blank" rel="me">
             <i class="fab fa-telegram"></i><span>{% trans "Телеграм-канал" %}</span>
         </a>
     {% endif %}
 
-    
     <a href="{% trans "https://twitter.com/rulikkk" %}" class="contacts-item" target="_blank" rel="me">
         <i class="fab fa-twitter-square"></i>
         <span>{% trans "Твиттер" %}</span>
-    </a>
-
-    <a href="{% trans "https://linkedin.com/in/rustem-mustafin-8a148368/" %}" class="contacts-item" target="_blank" rel="me">
-        <i class="fab fa-linkedin"></i>
-        <span>{% trans "LinkedIn" %}</span>
     </a>
 
     {% comment %}
@@ -37,18 +45,9 @@
     </a>
     
     {% endcomment %}
-    <a href="{% trans "https://github.com/rulikkk" %}" class="contacts-item" target="_blank" rel="me">
-        <i class="fab fa-github"></i>
-        <span>{% trans "Гитхаб" %}</span>
-    </a>
 
-    <a href="mailto:{% trans "mustafin.rustem@gmail.com" %}" class="contacts-item" target="_blank" rel="me">
-        <i class="fas fa-envelope"></i>
-        <span>{% trans "mustafin.rustem@gmail.com" %}</span>
-    </a>
 
     <a href="https://{{ request.get_host }}/rss/" class="contacts-item" target="_blank" rel="syndication">
         <i class="fas fa-rss-square"></i>
         <span>{% trans "RSS" %}</span>
     </a>
-</section>

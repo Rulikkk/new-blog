@@ -55,18 +55,7 @@
                 {% block footer_contacts %}
                     <div class="contacts">
                         <div>{% trans "Для связи" %} &rarr;</div>
-                        <a href="mailto:{% trans "mustafin.rustem@gmail.com" %}" class="contacts-item" target="_blank" rel="me">
-                            <i class="fas fa-envelope"></i>
-                            <span>{% trans "mustafin.rustem@gmail.com" %}</span>
-                        </a>
-                        <a href="{% trans "https://t.me/rulikkk" %}" class="contacts-item" target="_blank" rel="me">
-                            <i class="fab fa-telegram"></i>
-                            <span>{% trans "Телеграм" %}</span>
-                        </a>
-                        <a href="{% trans "https://twitter.com/rulikkk" %}" class="contacts-item" target="_blank" rel="me">
-                            <i class="fab fa-twitter-square"></i>
-                            <span>{% trans "Твиттер" %}</span>
-                        </a>
+                        {% include "common/contacts.html" %}
                     </div>
                 {% endblock %}
 
