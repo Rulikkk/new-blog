@@ -18,9 +18,11 @@
             {% trans "Войти через Патреон" %}
         </a>
 
+        {% comment %}
         <a href="{% url "login_club" %}?goto={{ request.scheme }}://{{ request.get_host }}{{ story.get_absolute_url }}" class="button">
             {% trans "Войти через Вастрик.Клуб" %}
         </a>
+        {% endcomment %}
     </div>
 
 {#    <div class="block-description">#}
