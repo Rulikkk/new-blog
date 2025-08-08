@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-08 11:45+0000\n"
+"POT-Creation-Date: 2025-08-08 21:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,6 +49,14 @@ msgstr "Delete"
 #: frontend/html/comments/inline-comment-form.html:16
 msgid "Откомментировать прямо здесь..."
 msgstr "Comment right here..."
+
+#: frontend/html/comments/inline-comment-list.html:11
+msgid "Комментировать"
+msgstr "Comment"
+
+#: frontend/html/comments/inline-comment-list.html:29
+msgid "Войти и написать"
+msgstr "Login to comment"
 
 #: frontend/html/common/contacts.html:4
 #: frontend/html/common/post_subscribe.html:35
@@ -369,10 +377,6 @@ msgstr ""
 msgid "Войти через Патреон"
 msgstr "Log in with Patreon"
 
-#: frontend/html/users/login.html:22
-msgid "Войти через Вастрик.Клуб"
-msgstr "Log in with Vastrik Club"
-
 #: frontend/html/users/post_access_denied.html:13
 msgid "Пост только для своих"
 msgstr "Members only post"
@@ -565,6 +569,9 @@ msgid ""
 msgstr ""
 "Subscribe to any of my channels so you don't miss new posts. Email is "
 "usually the most reliable way but the Gen Z hate it, so I have socials too."
+
+#~ msgid "Войти через Вастрик.Клуб"
+#~ msgstr "Log in with Vastrik Club"
 
 #~ msgid "https://mastodon.online/@vas3k"
 #~ msgstr "https://mas.to/@vas3kcom"
