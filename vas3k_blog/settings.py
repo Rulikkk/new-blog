@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.humanize",
     "django.contrib.sitemaps",
+    "django.contrib.sites",
+    "django.contrib.redirects",
     "authn.apps.AuthnConfig",
     "users.apps.UsersConfig",
     "posts.apps.PostsConfig",
@@ -50,6 +52,8 @@ INSTALLED_APPS = [
     "notifications.apps.NotificationsConfig",
 ]
 
+SITE_ID = 1;
+
 MIDDLEWARE = [
     "django.middleware.locale.LocaleMiddleware",
     "vas3k_blog.middleware.DomainLocaleMiddleware",
@@ -57,6 +61,7 @@ MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
+    "django.contrib.redirects.middleware.RedirectFallbackMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
