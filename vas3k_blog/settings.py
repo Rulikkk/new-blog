@@ -21,6 +21,7 @@ ALLOWED_HOSTS = [
     "rmust.me",
     "ru.rmust.me",
     "direct-test.mustaf.in",
+    "ru.direct-test.mustaf.in",
 ]
 INTERNAL_IPS = ["127.0.0.1"]
 
@@ -174,7 +175,8 @@ DOMAIN_LANGUAGES = {
     "ru.mustaf.in": "ru",
     "rmust.me": "en",
     "mustaf.in": "en",
-    "direct-test.mustaf.in": "en"
+    "direct-test.mustaf.in": "en",
+    "ru.direct-test.mustaf.in": "ru",
 }
 
 DOMAIN_LANGUAGE_SELECTOR = [
