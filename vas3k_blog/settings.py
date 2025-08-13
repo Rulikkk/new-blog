@@ -25,7 +25,7 @@ ALLOWED_HOSTS = [
 INTERNAL_IPS = ["127.0.0.1"]
 
 ADMINS = [
-    ("vas3k", "me@vas3k.ru"),
+    ("rulikkk", "mustafin@yandex.ru"),
 ]
 
 
@@ -170,19 +170,15 @@ LOCALE_PATHS = [
 
 # Domain to language mapping
 DOMAIN_LANGUAGES = {
-    "vas3k.blog": "ru",
-    "vas3k.com": "en",
+    "ru.rmust.me": "ru",
+    "ru.mustaf.in": "ru",
+    "rmust.me": "en",
+    "mustaf.in": "en",
+    "direct-test.mustaf.in": "en"
 }
 
-if DEBUG:
-    DOMAIN_LANGUAGES = {
-        "vas3k.ru": "ru",
-        "vas3k.en": "en",
-        **DOMAIN_LANGUAGES,
-    }
-
 DOMAIN_LANGUAGE_SELECTOR = [
-    ("ru", "RU", "https://mustaf.in"),
+    ("ru", "RU", "https://ru.mustaf.in"),
     ("en", "EN", "https://mustaf.in"),
 ]
 
@@ -246,16 +242,14 @@ AUTH_USER_MODEL = "users.User"
 SESSION_COOKIE_AGE = 300 * 24 * 60 * 60  # 300 days
 SENTRY_DSN = os.getenv("SENTRY_DSN")
 
-APP_HOST = "vas3k.blog"
-MIRRORS = ["vas3k.ru"]
+APP_HOST = "mustaf.in"
+MIRRORS = ["rmust.me"]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://vas3k.blog",
-    "https://*.vas3k.blog",
-    "https://vas3k.ru",
-    "https://*.vas3k.ru",
-    "https://vas3k.com",
-    "https://*.vas3k.com",
+    "https://rmust.me",
+    "https://*.rmust.me",
+    "https://mustaf.in",
+    "https://*.mustaf.in",
 ]
 
 STYLES_HASH = os.getenv("GITHUB_SHA") or str(randint(1, 10000))
