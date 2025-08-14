@@ -1,24 +1,15 @@
-# vas3k.blog
+# Rulikkk's blog
 
-This repository contains the source code of my blog — https://vas3k.blog
+This repository contains the source code of my blog — https://rmust.me
 
-It is completely custom and is not intended to be used as a universal blog engine. I keep his code here purely because why not. Open Source FTW!
+This is a fork of Vastrik' blog. Thank you!
 
-⚠️ Use it at your own risk! I'm not responsible for any damages or your wasted time trying to get your blog up and running on this. Also, I don't provide any support for this code, sorry.
+> It is completely custom and is not intended to be used as a universal blog engine. I keep his code here purely because why not. Open Source FTW!
+> 
+> ⚠️ Use it at your own risk! I'm not responsible for any damages or your wasted time trying to get your blog up and running on this. Also, I don't provide any support for this code, sorry.
 
 
 ## ⚙️ Tech details
-
-**Backend:**
-- Python 3.11+
-- Django 4+
-- PostgreSQL
-- [Poetry](https://python-poetry.org/) as a package manager
-
-**Frontend:**
-- [htmx](https://htmx.org/)
-- Mostly pure JS, no webpack, no builders
-- No CSS framework
 
 **Blogging part:**
 - Markdown with a bunch of [custom plugins](common/markdown/plugins)
@@ -48,11 +39,13 @@ $ docker-compose up
 
 Then open http://localhost:8000 and see an empty page.
 
-## 🤔 Contributions, etc
+## Notes
 
-Well, like, who in their right mind contributes to other people's blogs? But feel free to use Github Issues if you want to repord bug or anything else :)
- 
+Working with locales:
 
-## 🧸 Repository mascot
-
-![](https://i.vas3k.ru/dxq.jpg)
+```bash
+$(poetry env activate) # activate environment
+python manage.py makemessage --all
+# update locale/en/LC_MESSAGES/django.po at this stage with translations
+python manage.py compilemessages
+```

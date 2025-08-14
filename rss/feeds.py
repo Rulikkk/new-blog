@@ -10,7 +10,7 @@ from vas3k_blog.strings import DESCRIPTION
 
 
 class FullFeed(Feed):
-    title = _("Вастрик.ру")
+    title = _("RMust.me")
     link = "/rss/"
     description = DESCRIPTION
 
@@ -25,10 +25,10 @@ class FullFeed(Feed):
         return item.title
 
     def author_name(self):
-        return _("Вастрик")
+        return _("Рустем Мустафин")
 
     def item_copyright(self):
-        return "vas3k.blog"
+        return "rmust.me"
 
     def item_pubdate(self, item):
         return item.created_at
@@ -52,12 +52,12 @@ class FullFeed(Feed):
 
 
 class PrivateFeed(FullFeed):
-    title = _("Вастрик.ру: Секретный фид")
+    title = _("RMust.me: Секретный фид")
     link = "/rss/private/"
 
 
 class PublicFeed(FullFeed):
-    title = _("Вастрик.ру: Только публичные посты")
+    title = _("RMust.me: Только публичные посты")
     link = "/rss/public/"
 
     def items(self):

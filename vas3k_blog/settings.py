@@ -16,6 +16,7 @@ DEBUG = (os.getenv("DEBUG") != "false")
 ALLOWED_HOSTS = [
     "0.0.0.0",
     "127.0.0.1",
+    "localhost",
     "mustaf.in",
     "ru.mustaf.in",
     "rmust.me",
@@ -159,7 +160,7 @@ LANGUAGES = [
     # ("hi", "Hindi"),
 ]
 
-LANGUAGE_CODE = "en"
+LANGUAGE_CODE = "ru"
 TIME_ZONE = "UTC"
 USE_I18N = True
 USE_L10N = True
@@ -177,6 +178,7 @@ DOMAIN_LANGUAGES = {
     "mustaf.in": "en",
     "direct-test.mustaf.in": "en",
     "ru.direct-test.mustaf.in": "ru",
+    "localhost": "en"
 }
 
 DOMAIN_LANGUAGE_SELECTOR = [

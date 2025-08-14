@@ -77,17 +77,17 @@ def index(request):
                 "template": "index/posts3.html",
                 "url": "/world/",
                 "posts": world_posts
-            } if get_language() == "ru" else {},
+            } if len(world_posts) > 0 else {},
             {
                 "title": _("Нетленки"),
                 "template": "index/posts2.html",
                 "posts": best_posts
-            } if get_language() == "ru" else {},
-            {
-                "title": _("Проекты"),
-                "template": "index/projects.html",
-                "posts": []
-            } if get_language() == "ru" else {},
+            } if len(best_posts) > 0 else {},
+            # {
+            #     "title": _("Проекты"),
+            #     "template": "index/projects.html",
+            #     "posts": []
+            # } if get_language() == "ru" else {},
         ]
     })
 

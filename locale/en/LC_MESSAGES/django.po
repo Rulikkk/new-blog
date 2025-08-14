@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-08 21:53+0000\n"
+"POT-Creation-Date: 2025-08-14 16:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,7 +105,7 @@ msgstr "Twitter"
 msgid "RSS"
 msgstr "RSS"
 
-#: frontend/html/common/header.html:7 vas3k_blog/strings.py:4
+#: frontend/html/common/header.html:7 rss/feeds.py:28 vas3k_blog/strings.py:4
 msgid "Рустем Мустафин"
 msgstr "Rustem Mustafin"
 
@@ -220,7 +220,7 @@ msgstr "Become a Patron"
 msgid "Buymeacoffee.com"
 msgstr ""
 
-#: frontend/html/emails/layout.html:4 rss/feeds.py:13
+#: frontend/html/emails/layout.html:4
 msgid "Вастрик.ру"
 msgstr "Vastrik"
 
@@ -496,23 +496,19 @@ msgstr "Travel"
 msgid "Нетленки"
 msgstr "Oldies but goldies"
 
-#: posts/views.py:87
-msgid "Проекты"
-msgstr "Projects"
-
-#: rss/feeds.py:28
-msgid "Вастрик"
-msgstr "Vastrik"
+#: rss/feeds.py:13
+msgid "RMust.me"
+msgstr "RMust.me"
 
 #: rss/feeds.py:55
-msgid "Вастрик.ру: Секретный фид"
-msgstr "Vastrik: Secret feed"
+msgid "RMust.me: Секретный фид"
+msgstr "RMust.me: Secret feed"
 
 #: rss/feeds.py:60
-msgid "Вастрик.ру: Только публичные посты"
-msgstr "Vastrik: Public posts only"
+msgid "RMust.me: Только публичные посты"
+msgstr "RMust.me: Public posts only"
 
-#: vas3k_blog/settings.py:230
+#: vas3k_blog/settings.py:235
 msgid "Вастрик <inside@inside.vas3k.ru>"
 msgstr "Vastrik <inside@inside.vas3k.ru>"
 
@@ -569,6 +565,12 @@ msgid ""
 msgstr ""
 "Subscribe to any of my channels so you don't miss new posts. Email is "
 "usually the most reliable way but the Gen Z hate it, so I have socials too."
+
+#~ msgid "Проекты"
+#~ msgstr "Projects"
+
+#~ msgid "Вастрик"
+#~ msgstr "Vastrik"
 
 #~ msgid "Войти через Вастрик.Клуб"
 #~ msgstr "Log in with Vastrik Club"
