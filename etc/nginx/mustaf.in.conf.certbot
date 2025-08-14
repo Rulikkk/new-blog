@@ -2,23 +2,22 @@ limit_req_zone $binary_remote_addr zone=new_blog_limit:10m rate=3r/s;
 
 server {
 
-    server_name www.mustaf.in; # www.es.vas3k.blog www.zh.vas3k.blog www.hi.vas3k.blog;
+    server_name www.mustaf.in www.ru.mustaf.in; # www.es.vas3k.blog www.zh.vas3k.blog www.hi.vas3k.blog;
 
-    listen 80;
-    listen [::]:80;
+    rewrite ^(.*) https://mustaf.in$1 permanent;
 
-    listen [::]:443 http2 ssl; # managed by Certbot
-    listen 443 http2 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/mustaf.in/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/mustaf.in/privkey.pem; # managed by Certbot
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/mustaf.in-0001/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/mustaf.in-0001/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
-    rewrite ^(.*) https://mustaf.in$1 permanent;
+
 }
 
 server {
-    server_name mustaf.in;
+    server_name mustaf.in ru.mustaf.in;
 
     charset utf-8;
     client_max_body_size 15M;
@@ -59,38 +58,57 @@ server {
         proxy_pass http://0.0.0.0:8022;
     }
 
-    listen [::]:443 http2 ssl ipv6only=on; # managed by Certbot
-    listen 443 http2 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/mustaf.in/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/mustaf.in/privkey.pem; # managed by Certbot
+
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/mustaf.in-0001/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/mustaf.in-0001/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
+
 }
 
+
 server {
+    if ($host = ru.mustaf.in) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
     if ($host = mustaf.in) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
+
+    server_name mustaf.in ru.mustaf.in;
     listen 80;
-    listen [::]:80;
-    server_name mustaf.in;
     return 404; # managed by Certbot
+
+
+
+
 }
 
 server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    listen 443 ssl http2 default_server;
-    listen [::]:443 ssl http2 default_server;
+    if ($host = www.mustaf.in) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
 
-    ssl_certificate /etc/letsencrypt/live/mustaf.in/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/mustaf.in/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
-    server_name _;
+    if ($host = www.ru.mustaf.in) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
 
-    return 404;
+
+
+    server_name www.mustaf.in www.ru.mustaf.in;
+
+    listen 80;
+    listen [::]:80;
+    return 404; # managed by Certbot
+
+
+
+
 }
