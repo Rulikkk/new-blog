@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-14 16:06+0000\n"
+"POT-Creation-Date: 2026-05-13 15:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -128,7 +128,7 @@ msgstr "Subscribe"
 msgid "Донат"
 msgstr "Donate"
 
-#: frontend/html/common/header.html:56
+#: frontend/html/common/header.html:59
 msgid "Искать по сайту..."
 msgstr "Search the site..."
 
@@ -145,7 +145,7 @@ msgid "Тогда вот"
 msgstr "Here you go"
 
 #: frontend/html/common/post_subscribe.html:5
-msgid "Подписка на Вастрика"
+msgid "Подписка на Рустика"
 msgstr "Subscribe to new posts"
 
 #: frontend/html/common/post_subscribe.html:14
